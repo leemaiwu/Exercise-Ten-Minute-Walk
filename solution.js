@@ -18,7 +18,7 @@ const isValidWalk = walk => {
     }
     let count = [n, s, w, e]
     console.log(count)
-    if (walk.length === 10 && ((count[0] === count[1] && count[1] > 0) || (count[2] === count[3] && count[3] > 0 ))) {
+    if (walk.length === 10 && (count[0] === count[1] && count[2] === count[3])) {
         return true
     } else {
         return false
@@ -26,7 +26,7 @@ const isValidWalk = walk => {
 }
 
 console.log(isValidWalk(['w'])) // false
-console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s'])) // false
+console.log(isValidWalk(['e','e','e','w','n','s','n','s','e','w'])) // false
 console.log(isValidWalk(['n','s','n','s','n','s','n','s','n','s'])) // true
 console.log(isValidWalk(['n','s','n','s','n','s','n','s','n'])) // false
 console.log(isValidWalk(['n','n','n','s','n','s','n','s','n','s'])) // false
